@@ -35,7 +35,7 @@ public class Screen {
     }
 
     public void pullDown() {
-        device.driver.executeScript("mobile:scroll", ImmutableMap.of("direction", "down"));
+        device.driver.executeScript("mobile:scroll", ImmutableMap.of("direction", "up"));
     }
 
 }

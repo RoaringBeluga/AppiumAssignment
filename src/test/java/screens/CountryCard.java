@@ -1,6 +1,7 @@
 package screens;
 
 import device.Device;
+import org.openqa.selenium.By;
 import screens.selectors.CountryCardSelectors;
 
 public class CountryCard extends Screen {
@@ -13,6 +14,12 @@ public class CountryCard extends Screen {
 
     public void goBack() {
         device.driver.findElement(selectors.backButton()).click();
+    }
+
+    public By headerSelector(String countryName) {
+            return switch (device.deviceType) {
+                case IOS, ANDROID -> selectors.cardHeader(countryName);
+            };
     }
 
     public boolean headerPresent(String countryName) {

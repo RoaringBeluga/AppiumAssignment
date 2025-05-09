@@ -8,8 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="IosCountryListTest"/>
-            <class name="AndroidCountryListTest"/>
+            <class name="TestCountryList"/>
         </classes>
     </test>
 
@@ -20,8 +19,7 @@
             </run>
         </groups>
         <classes>
-            <class name="IosSearchTest"/>
-            <class name="AndroidSearchTest"/>
+            <class name="TestSearchField"/>
         </classes>
     </test>
 </suite>

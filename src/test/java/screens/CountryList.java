@@ -14,7 +14,7 @@ public class CountryList extends Screen {
         this.selectors = new CountryListSelectors(device.deviceType);
     }
 
-    WebElement findCountryByName(String countryName) {
+    public WebElement findCountryByName(String countryName) {
         return switch (device.deviceType) {
             case IOS -> this.device.driver.findElement(AppiumBy.name(countryName));
             case ANDROID -> this.device.driver.findElement(selectors.countryByName(countryName));

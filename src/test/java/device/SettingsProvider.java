@@ -10,4 +10,10 @@ public interface SettingsProvider {
     boolean isVirtual();
 
     void setDeviceType(DeviceType deviceType);
+
+    boolean headless();
+
+    long waitTimeout();
+
+    long pollingInterval();
 }
