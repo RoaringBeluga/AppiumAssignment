@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Countries" verbose="1">
+    <test name="List">
+        <groups>
+            <run>
+                <include name="countrylist"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="IosCountryListTest"/>
+            <class name="AndroidCountryListTest"/>
+        </classes>
+    </test>
+
+    <test name="Search">
+        <groups>
+            <run>
+                <include name="search"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="IosSearchTest"/>
+            <class name="AndroidSearchTest"/>
+        </classes>
+    </test>
+</suite>
+
