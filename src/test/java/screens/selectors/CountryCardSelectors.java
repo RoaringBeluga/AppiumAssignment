@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import java.util.Map;
 
 public class CountryCardSelectors {
-    private DeviceType deviceType;
+    private final DeviceType deviceType;
     public CountryCardSelectors(DeviceType deviceType) {
         this.deviceType = deviceType;
     }

@@ -2,12 +2,16 @@ ios:
   device-id: "F7B77DF9-C862-4B92-AF9A-10CEB8FF367B"
   package-path: "/Users/username/Library/Developer/Xcode/DerivedData/CountriesChallenge-grbnenqaqpxdrububxvklshuixrv/Build/Products/Debug-iphonesimulator/CountriesChallenge.app"
   package-id: "com.walmart.CountriesChallenge"
-  wipe-device: true
+  wipe-device: false
 android:
-  device-id: "Medium_Phone_API_36"
+  device-id: "@Medium_Phone_AOSP_API_35"
+  device-id-2: "emulator-5554"
   package-path: "/Users/username/Development/Test/TestProject-android-main/app/build/outputs/apk/debug/app-debug.apk"
   package-id: "com.example.wallmartexample"
-  wipe-device: true
+  wipe-device: false
+  avd: true
+
 general:
   appium-js-path: "/usr/local/Cellar/appium/2.18.0/libexec/lib/node_modules/appium/build/lib/main.js"
-  device-type: "IOS"
+  wait-timeout: 30
+  polling-interval: 2

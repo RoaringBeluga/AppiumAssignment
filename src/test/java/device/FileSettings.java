@@ -64,9 +64,28 @@ public class FileSettings implements SettingsProvider {
     @Override
     public boolean isVirtual() {
         return switch(this.selectedOs) {
-            case IOS -> config.getOrElse("ios.simulator", true);
-            case ANDROID -> config.getOrElse("android.avd", true);
+            case IOS -> config.getOrElse("ios.simulator", false);
+            case ANDROID -> config.getOrElse("android.avd", false);
         };
 
+    }
+
+    @Override
+    public boolean headless() {
+        return switch(this.selectedOs) {
+            case IOS -> config.getOrElse("ios.headless", false);
+            case ANDROID -> config.getOrElse("android.headless", false);
+        };
+
+    }
+
+    @Override
+    public long waitTimeout() {
+        return config.getLongOrElse("general.wait-timeout", 30);
+    }
+
+    @Override
+    public long pollingInterval() {
+        return config.getLongOrElse("general.polling-interval", 2);
     }
 }
